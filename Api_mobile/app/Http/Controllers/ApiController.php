@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\tb_penyakit;
+use App\Http\Resources\data_latihResource;
+use App\Models\data_latih;
 use Illuminate\Http\Request;
 
 class ApiController extends Controller
@@ -12,8 +13,8 @@ class ApiController extends Controller
      */
     public function index()
     {
-        $alldata = tb_penyakit::all();
-        return response()->json(['data' => $alldata]);
+        $alldata = data_latih::all();
+        return data_latihResource::collection($alldata);
     }
 
     /**
