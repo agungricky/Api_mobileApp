@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 19 Nov 2023 pada 23.04
+-- Waktu pembuatan: 29 Des 2023 pada 15.10
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 8.1.6
 
@@ -37,7 +37,7 @@ CREATE TABLE `data_latih` (
   `tekstur_batang` varchar(15) NOT NULL,
   `ukuran_daun` varchar(15) NOT NULL,
   `warna_daun` varchar(15) NOT NULL,
-  `kesimpulan` int(1) NOT NULL
+  `kesimpulan` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -45,33 +45,33 @@ CREATE TABLE `data_latih` (
 --
 
 INSERT INTO `data_latih` (`No`, `ukuran_akar`, `warna_akar`, `tekstur_akar`, `ukuran_batang`, `warna_batang`, `tekstur_batang`, `ukuran_daun`, `warna_daun`, `kesimpulan`) VALUES
-(1, 'proporsional', 'krem', 'lembek', 'proporsional', 'hijau_muda', 'kaku', 'proporsional', 'hijau', 1),
-(2, 'terlalu_kecil', 'krem', 'kaku', 'proposional', 'hijau_muda', 'kaku', 'proposional', 'hijau', 1),
-(3, 'terlalu_kecil', 'hitam', 'lembek', 'proposional', 'kekuningan', 'lembek', 'proposional', 'kekuningan', 2),
-(4, 'proposional', 'krem', 'kaku', 'proposional', 'hijau_muda', 'kaku', 'proposional', 'hijau', 1),
-(5, 'proposional', 'krem', 'kaku', 'terlalu_kecil', 'hijau_muda', 'kaku', 'terlalu_kecil', 'hijau', 1),
-(6, 'membengkak', 'hitam', 'kaku', 'terlalu_kecil', 'hijau_muda', 'kaku', 'proposional', 'hijau', 2),
-(7, 'proposional', 'krem', 'kaku', 'proposional', 'kekuningan', ' lembek', 'proposional', 'kekuningan', 2),
-(8, 'proposional', 'krem', 'kaku', 'proposional', 'hijau_muda', 'kaku', 'proposional', 'kekuningan', 2),
-(9, 'terlalu_kecil', 'krem', 'lembek', 'proposional', 'kekuningan', 'lembek', 'terlalu_kecil', 'kekuningan', 2),
-(10, 'proposional', 'hitam', 'lembek', 'proposional', 'hijau_muda', 'kaku', 'proposional 	', 'hijau', 1),
-(11, 'membengkak', 'krem', 'kaku', 'proporsional', 'hijau_muda', 'kaku', 'terlalu_kecil', 'hijau', 1),
-(12, 'membengkak', 'hitam', 'lembek', 'terlalu_kecil', 'kekuningan', 'lembek', 'terlalu_kecil', 'kekuningan', 2),
-(13, 'proposional', 'krem', 'kaku', 'proposional', 'hijau_muda', 'kaku', 'terlalu_kecil', 'kekuningan', 2),
-(14, 'proposional', 'krem', 'kaku', 'terlalu_kecil', 'hijau_muda', 'kaku', 'proposional', 'hijau', 1),
-(15, ' proposional', 'krem', 'kaku', 'terlalu_kecil', 'hijau_muda', 'kaku', 'terlalu_kecil', 'hijau', 1),
-(16, 'terlalu_kecil', 'krem', 'lembek', 'terlalu_kecil', 'hijau_muda', 'kaku', 'proposional', 'hijau', 1),
-(17, 'terlalu_kecil', 'krem', 'lembek', 'terlalu_kecil', 'kekuningan', 'kaku', 'proposional', 'kekuningan', 2),
-(18, 'proposional', 'krem', 'lembek', 'terlalu_kecil', 'kekuningan', 'kaku', 'proposional 	', 'hijau', 1),
-(19, 'terlalu_kecil', 'krem', 'lembek', 'terlalu_kecil', 'kekuningan', 'kaku', 'proposional', 'hijau', 2),
-(20, 'membengkak', 'hitam', 'kaku', 'proposional', 'hijau_muda', 'kaku', 'proposional', 'hijau', 1),
-(21, 'proposional', 'krem', 'kaku', 'terlalu_kecil', 'kekuningan', 'lembek', 'proposional', 'hijau', 1),
-(22, 'proposional', 'krem', 'kaku', 'proposional', 'hijau_muda', 'kaku', 'terlalu_kecil', 'kekuningan', 2),
-(23, 'proposional', 'krem', 'kaku', 'terlalu_kecil', 'hijau muda 	', 'kaku', 'terlalu_kecil', 'hijau', 1),
-(24, 'proposional', 'hitam', 'kaku', 'terlalu_kecil', 'kekuningan', 'kaku', 'terlalu_kecil', 'hijau', 1),
-(25, 'proposional', 'hitam', 'kaku', 'terlalu_kecil', 'kekuningan', 'kaku', 'terlalu_kecil', 'kekuningan', 2),
-(26, 'proposional', 'krem', 'kaku', 'terlalu_kecil', 'kekuningan', 'kaku', 'terlalu_kecil', 'kekuningan', 1),
-(27, 'proposional', 'krem', 'kaku', 'proposional', 'kekuningan', 'kaku', 'terlalu_kecil', 'kekuningan', 2);
+(1, 'proporsional', 'krem', 'lembek', 'proporsional', 'hijau_muda', 'kaku', 'proporsional', 'hijau', '1'),
+(2, 'terlalu_kecil', 'krem', 'kaku', 'proporsional', 'hijau_muda', 'kaku', 'proporsional', 'hijau', '1'),
+(3, 'terlalu_kecil', 'hitam', 'lembek', 'proporsional', 'kekuningan', 'lembek', 'proporsional', 'kekuningan', '2'),
+(4, 'proporsional', 'krem', 'kaku', 'proporsional', 'hijau_muda', 'kaku', 'proporsional', 'hijau', '1'),
+(5, 'proporsional', 'krem', 'kaku', 'terlalu_kecil', 'hijau_muda', 'kaku', 'terlalu_kecil', 'hijau', '1'),
+(6, 'membengkak', 'hitam', 'kaku', 'terlalu_kecil', 'hijau_muda', 'kaku', 'proporsional', 'hijau', '2'),
+(7, 'proporsional', 'krem', 'kaku', 'proporsional', 'kekuningan', ' lembek', 'proporsional', 'kekuningan', '2'),
+(8, 'proporsional', 'krem', 'kaku', 'proporsional', 'hijau_muda', 'kaku', 'proporsional', 'kekuningan', '2'),
+(9, 'terlalu_kecil', 'krem', 'lembek', 'proporsional', 'kekuningan', 'lembek', 'terlalu_kecil', 'kekuningan', '2'),
+(10, 'proporsional', 'hitam', 'lembek', 'proporsional', 'hijau_muda', 'kaku', 'proporsional', 'hijau', '1'),
+(11, 'membengkak', 'krem', 'kaku', 'proporsional', 'hijau_muda', 'kaku', 'terlalu_kecil', 'hijau', '1'),
+(12, 'membengkak', 'hitam', 'lembek', 'terlalu_kecil', 'kekuningan', 'lembek', 'terlalu_kecil', 'kekuningan', '2'),
+(13, 'proporsional', 'krem', 'kaku', 'proporsional', 'hijau_muda', 'kaku', 'terlalu_kecil', 'kekuningan', '2'),
+(14, 'proporsional', 'krem', 'kaku', 'terlalu_kecil', 'hijau_muda', 'kaku', 'proporsional', 'hijau', '1'),
+(15, 'proporsional', 'krem', 'kaku', 'terlalu_kecil', 'hijau_muda', 'kaku', 'terlalu_kecil', 'hijau', '1'),
+(16, 'terlalu_kecil', 'krem', 'lembek', 'terlalu_kecil', 'hijau_muda', 'kaku', 'proporsional', 'hijau', '1'),
+(17, 'terlalu_kecil', 'krem', 'lembek', 'terlalu_kecil', 'kekuningan', 'kaku', 'proporsional', 'kekuningan', '2'),
+(18, 'proporsional', 'krem', 'lembek', 'terlalu_kecil', 'kekuningan', 'kaku', 'proporsional', 'hijau', '1'),
+(19, 'terlalu_kecil', 'krem', 'lembek', 'terlalu_kecil', 'kekuningan', 'kaku', 'proporsional', 'hijau', '2'),
+(20, 'membengkak', 'hitam', 'kaku', 'proporsional', 'hijau_muda', 'kaku', 'proporsional', 'hijau', '1'),
+(21, 'proporsional', 'krem', 'kaku', 'terlalu_kecil', 'kekuningan', 'lembek', 'proporsional', 'hijau', '1'),
+(22, 'proporsional', 'krem', 'kaku', 'proporsional', 'hijau_muda', 'kaku', 'terlalu_kecil', 'kekuningan', '2'),
+(23, 'proporsional', 'krem', 'kaku', 'terlalu_kecil', 'hijau_muda', 'kaku', 'terlalu_kecil', 'hijau', '1'),
+(24, 'proporsional', 'hitam', 'kaku', 'terlalu_kecil', 'kekuningan', 'kaku', 'terlalu_kecil', 'hijau', '1'),
+(25, 'proporsional', 'hitam', 'kaku', 'terlalu_kecil', 'kekuningan', 'kaku', 'terlalu_kecil', 'kekuningan', '2'),
+(26, 'proporsional', 'krem', 'kaku', 'terlalu_kecil', 'kekuningan', 'kaku', 'terlalu_kecil', 'kekuningan', '1'),
+(27, 'proporsional', 'krem', 'kaku', 'proporsional', 'kekuningan', 'kaku', 'terlalu_kecil', 'kekuningan', '2');
 
 -- --------------------------------------------------------
 
@@ -133,7 +133,7 @@ ALTER TABLE `tb_penyakit`
 -- AUTO_INCREMENT untuk tabel `data_latih`
 --
 ALTER TABLE `data_latih`
-  MODIFY `No` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `No` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_penyakit`

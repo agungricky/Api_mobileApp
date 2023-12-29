@@ -13,10 +13,10 @@ class ApiController extends Controller
      */
     public function index()
     {
-        // $alldata = data_latih::all();
-        // return data_latihResource::collection($alldata);
-
         $alldata = data_latih::all();
+        foreach ($alldata as $item) {
+            $item->kesimpulan = ($item->kesimpulan == 2) ? 'Tidak Sehat' : 'Sehat';
+        }
         return $alldata->toArray();
     }
 
@@ -195,8 +195,8 @@ class ApiController extends Controller
             'inputUser' => $isiForm,
             'TotalSehat' => $kesimpulanSehat,
             'TotalTidakSehat' => $kesimpulanTidakSehat,
-            'Presentase sehat' => $presentase_Sehat,
-            'Presentase Tidak Sehat' => $presentase_TidakSehat,
+            'Presentase sehat' => number_format($presentase_Sehat, 3),
+            'Presentase Tidak Sehat' => number_format($presentase_TidakSehat, 3),
             'Kesimpulan' => $kesimpulan
         ];
 

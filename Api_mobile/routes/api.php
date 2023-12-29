@@ -25,4 +25,5 @@ Route::get('/viewText', function () {
 
 Route::get('alldata', [ApiController::class, 'index']);
 
-Route::post('/form', [ApiController::class, 'submitForm']);
+// Route::post('/form', [ApiController::class, 'submitForm']);
+Route::match(['get', 'post'], '/form', [ApiController::class, 'submitForm']);
